@@ -12,6 +12,9 @@ git checkout -b POC-converters-factory POC-converters-factory
 git checkout master
 git checkout -b RB-0.1 RB-0.1
 git checkout master
+git tag ejson-0.1.0 remotes/tags/ejson-0.1.0
+git tag ejson-0.2.0 remotes/tags/ejson-0.2.0
+
 git remote add -f mirror git@github.com:Eiffel-World/ejson-svn.git
 git gc
 git svn rebase

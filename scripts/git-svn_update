@@ -1,6 +1,5 @@
 #!/bin/sh
 
 cd $1
-git fetch origin
-git fetch mirror
+git svn rebase
 git push -u --mirror mirror

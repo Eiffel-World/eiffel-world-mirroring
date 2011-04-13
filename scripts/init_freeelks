@@ -12,6 +12,11 @@ git checkout -b model_based_contracts model_based_contracts
 git checkout master
 git checkout -b trunk trunk
 git checkout master
+git tag EiffelSoftware remotes/tags/EiffelSoftware
+git tag Eiffel_60 remotes/tags/Eiffel_60
+git tag Eiffel_61 remotes/tags/Eiffel_61
+git tag start remotes/tags/start
+
 git remote add -f mirror git@github.com:Eiffel-World/freeelks-svn.git
 git gc
 git svn rebase
