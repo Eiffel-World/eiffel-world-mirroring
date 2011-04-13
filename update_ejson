@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ejson-svn
+git svn rebase
+git push -u --mirror mirror

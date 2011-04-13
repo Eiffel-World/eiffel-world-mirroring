@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mkdir ../eapml
+cd ../eapml
+git init
+git config core.bare true
+git remote add --mirror -f origin git://github.com/clemahieu/eapml.git
+git remote add -f mirror git@github.com:Eiffel-World/eapml.git
+git fetch origin
+git fetch mirror
+git push --mirror mirror

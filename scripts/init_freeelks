@@ -1,0 +1,18 @@
+#!/bin/sh
+
+mkdir ../freeelks-svn
+cd ../freeelks-svn
+git svn init https://freeelks.svn.sourceforge.net/svnroot/freeelks -T trunk -b branches -t tags
+git svn fetch
+git checkout -b EiffelSoftware EiffelSoftware
+git checkout master
+git checkout -b Eiffel_66 Eiffel_66
+git checkout master
+git checkout -b model_based_contracts model_based_contracts
+git checkout master
+git checkout -b trunk trunk
+git checkout master
+git remote add -f mirror git@github.com:Eiffel-World/freeelks-svn.git
+git gc
+git svn rebase
+git push -u --mirror mirror
