@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir ../eapml
-cd ../eapml
+mkdir ..../gitrepo/eapml
+cd ../gitrepo/eapml
 git init
 git config core.bare true
 git remote add --mirror -f origin git://github.com/clemahieu/eapml.git

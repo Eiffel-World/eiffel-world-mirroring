@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir ../eTokyoCabinet
-cd ../eTokyoCabinet
+mkdir ../gitrepo/eTokyoCabinet
+cd ../gitrepo/eTokyoCabinet
 git init
 git config core.bare true
 git remote add --mirror -f origin git://github.com/jvelilla/eTokyoCabinet.git

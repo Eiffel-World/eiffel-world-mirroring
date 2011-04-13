@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir ../freeelks-svn
-cd ../freeelks-svn
+mkdir ../svnrepo/freeelks-svn
+cd ../svnrepo/freeelks-svn
 git svn init https://freeelks.svn.sourceforge.net/svnroot/freeelks -T trunk -b branches -t tags
 git svn fetch
 git checkout -b EiffelSoftware EiffelSoftware

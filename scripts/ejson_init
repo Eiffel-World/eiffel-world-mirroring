@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir ../ejson-svn
-cd ../ejson-svn
+mkdir ../svnrepo/ejson-svn
+cd ../svnrepo/ejson-svn
 git svn init https://svn.origo.ethz.ch/ejson -T trunk -b branches -t tags
 git svn fetch
 git checkout -b trunk_ise trunk_ise

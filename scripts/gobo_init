@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir ../gobo
-cd ../gobo
+mkdir ../gitrepo/gobo
+cd ../gitrepo/gobo
 git init
 git config core.bare true
 git remote add --mirror -f origin git://github.com/gobo-eiffel/gobo.git
