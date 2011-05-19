@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mkdir ../svnrepo/ejson-ise-svn
+cd ../svnrepo/ejson-ise-svn
+git svn init https://svn.origo.ethz.ch/ejson/branches/trunk_ise
+git svn fetch
+git remote add -f mirror git@github.com:Eiffel-World/ejson-ise-svn.git
+git gc
+git svn rebase
+git push -u --mirror mirror

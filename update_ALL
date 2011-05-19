@@ -1,8 +1,30 @@
 #!/bin/sh
 
-./update_eTokyoCabinet
-./update_eapml
-./update_eel
-./update_ejson
-./update_freeelks
-./update_gobo
+cd /usr/local/home/jfiat/MIRROR_EIFFEL_WORLD
+
+echo ----------------- >> update_ALL.log
+echo Updating all git MIRROR >> update_ALL.log
+
+
+echo update_eTokyoCabinet - `date` >> update_ALL.log 2>&1
+./update_eTokyoCabinet >> update_ALL.log 2>&1
+
+echo update_eapml - `date` >> update_ALL.log 2>&1
+./update_eapml >> update_ALL.log 2>&1
+
+echo update_eel - `date` >> update_ALL.log 2>&1
+./update_eel >> update_ALL.log 2>&1
+
+echo update_ejson - `date` >> update_ALL.log 2>&1
+./update_ejson >> update_ALL.log 2>&1
+
+echo update_ejson_ise - `date` >> update_ALL.log 2>&1
+./update_ejson_ise >> update_ALL.log 2>&1
+
+echo update_freeelks - `date` >> update_ALL.log 2>&1
+./update_freeelks >> update_ALL.log 2>&1
+
+echo update_gobo - `date` >> update_ALL.log 2>&1
+./update_gobo >> update_ALL.log 2>&1
+
+echo ----------------- - `date` >> update_ALL.log
