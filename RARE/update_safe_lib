@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./scripts/git-cvs_update safe-lib lib
+

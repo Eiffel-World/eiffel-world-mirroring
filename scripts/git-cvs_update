@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd cvsrepo/$1
+cd $2
+git cvsimport -p x -v -C  ../_git -a
+
+cd ../_git
+git gc
+git push -u --mirror mirror

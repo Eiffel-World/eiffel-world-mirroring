@@ -1,0 +1,12 @@
+#!/bin/sh
+
+mkdir ../svnrepo/eiffelstudio_curl-svn
+cd ../svnrepo/eiffelstudio_curl-svn
+git svn init https://svn.origo.ethz.ch/eiffelstudio/trunk/Src/library/cURL 
+git svn fetch -r 70782
+git checkout master
+
+git remote add -f mirror git@github.com:EiffelSoftware/mirror-Eiffel-cURL.git
+git gc
+git svn rebase
+git push -u --mirror mirror

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mkdir ../gitrepo/EiffelWebNino
+cd ../gitrepo/EiffelWebNino
+git init
+git config core.bare true
+git remote add --mirror -f origin git://github.com/jvelilla/EiffelWebNino.git
+git remote add -f mirror git@github.com:Eiffel-World/EiffelWebNino.git
+git fetch origin
+git fetch mirror
+git push --mirror mirror

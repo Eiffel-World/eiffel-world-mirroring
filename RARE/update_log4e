@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./scripts/git-svn_update log4e-svn

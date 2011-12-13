@@ -1,0 +1,12 @@
+#!/bin/sh
+
+mkdir ../svnrepo/goanna-svn
+cd ../svnrepo/goanna-svn
+git svn init https://svn.origo.ethz.ch/goanna/trunk/goanna
+git svn fetch
+git checkout master
+
+git remote add -f mirror git@github.com:Eiffel-World/goanna.git
+git gc
+git svn rebase
+git push -u --mirror mirror

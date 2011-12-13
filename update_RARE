@@ -1,0 +1,26 @@
+#!/bin/sh
+
+cd /usr/local/home/jfiat/MIRROR_EIFFEL_WORLD
+
+echo ----------------- >> logs/update_RARE.log
+echo Updating rare git MIRROR >> logs/update_RARE.log
+
+echo update_eapml - `date` >> logs/update_RARE.log 2>&1
+./RARE/update_eapml >> logs/update_RARE.log 2>&1
+
+echo update_eel - `date` >> logs/update_RARE.log 2>&1
+./RARE/update_eel >> logs/update_RARE.log 2>&1
+
+echo update_ejson_ise - `date` >> logs/update_RARE.log 2>&1
+./RARE/update_ejson_ise >> logs/update_RARE.log 2>&1
+
+echo update_goanna - `date` >> logs/update_RARE.log 2>&1
+./RARE/update_goanna >> logs/update_RARE.log 2>&1
+
+echo update_log4e - `date` >> logs/update_RARE.log 2>&1
+./RARE/update_log4e >> logs/update_RARE.log 2>&1
+
+echo update_safe_lib - `date` >> logs/update_RARE.log 2>&1
+./RARE/update_safe_lib >> logs/update_RARE.log 2>&1
+
+echo ----------------- - `date` >> logs/update_RARE.log

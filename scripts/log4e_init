@@ -1,0 +1,12 @@
+#!/bin/sh
+
+mkdir ../svnrepo/log4e-svn
+cd ../svnrepo/log4e-svn
+git svn init https://svn.origo.ethz.ch/goanna/trunk/log4e
+git svn fetch
+git checkout master
+
+git remote add -f mirror git@github.com:Eiffel-World/log4e.git
+git gc
+git svn rebase
+git push -u --mirror mirror
